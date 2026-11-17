@@ -21,7 +21,7 @@ def make_data_cross_sectional(file_path):
 
     # Convert the dataset from longitudinal to cross-sectional format
     cross_sectional_df = df.groupby("country").agg(
-        total_weeks=("Week #", "count"),  # Count of unique weeks
+        total_weeks=("Week #", "count"),  
         max_confirmed=("Confirmed", "max"),
         max_deaths=("Deaths", "max"),
         max_recovered=("Recovered", "max"),
